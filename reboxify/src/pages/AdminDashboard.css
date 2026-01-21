@@ -1,0 +1,140 @@
+.admin-dashboard-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.admin-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-card h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.users-list,
+.boxes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-item,
+.box-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.user-item:hover,
+.box-item:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.user-info,
+.box-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-info strong,
+.box-info strong {
+  color: #1f2937;
+  font-size: 1.05rem;
+}
+
+.user-info span,
+.box-info span {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.user-wallet {
+  font-weight: 700;
+  color: #16a34a;
+  font-size: 1.1rem;
+}
+
+.box-emoji {
+  font-size: 2.5rem;
+}
+
+.rental-count {
+  background: #16a34a;
+  color: white;
+  padding: 0.375rem 0.875rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.no-data {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2rem;
+}
+
+@media (max-width: 968px) {
+  .admin-content-grid {
+    grid-template-columns: 1fr;
+  }
+}

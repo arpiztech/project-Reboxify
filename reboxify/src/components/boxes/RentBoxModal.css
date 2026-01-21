@@ -1,0 +1,183 @@
+.rent-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.rent-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  animation: slideUp 0.3s ease-out;
+}
+
+.rent-modal h3 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.rent-modal-content {
+  margin-bottom: 2rem;
+}
+
+.box-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.box-icon {
+  font-size: 3rem;
+}
+
+.box-preview h4 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+}
+
+.box-preview p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.rental-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.detail-row span {
+  color: #6b7280;
+}
+
+.detail-row strong {
+  font-size: 1.1rem;
+}
+
+.amount {
+  color: #1f2937;
+}
+
+.amount-success {
+  color: #16a34a;
+}
+
+.amount-danger {
+  color: #ef4444;
+}
+
+.info-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.info-message.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.info-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.info-message p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.rental-terms {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.rental-terms h5 {
+  margin: 0 0 0.75rem 0;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.rental-terms ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.rental-terms li {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+.rental-terms li:last-child {
+  margin-bottom: 0;
+}
+
+.rent-modal-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.rent-modal-actions button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-cancel:hover {
+  background: #d1d5db;
+}
+
+.btn-confirm {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(22, 163, 74, 0.3);
+}
+
+.btn-confirm:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}

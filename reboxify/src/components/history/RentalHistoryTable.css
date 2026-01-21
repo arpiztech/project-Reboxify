@@ -1,0 +1,104 @@
+.rental-history-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.rental-history-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rental-history-table thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.rental-history-table th {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.rental-history-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.rental-history-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.rental-history-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.rental-history-table td {
+  padding: 1.25rem 1.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.box-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box-icon {
+  font-size: 2rem;
+}
+
+.box-info strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.condition-badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.condition-badge.good {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.condition-badge.damaged {
+  background-color: #fed7aa;
+  color: #92400e;
+}
+
+.deposit,
+.refund {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.05rem;
+}
+
+.refund {
+  color: #16a34a;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .rental-history-table {
+    overflow-x: auto;
+  }
+
+  .rental-history-table table {
+    min-width: 600px;
+  }
+}

@@ -1,0 +1,27 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.card-small {
+  padding: 1rem;
+}
+
+.card-medium {
+  padding: 1.5rem;
+}
+
+.card-large {
+  padding: 2rem;
+}
+
+.card-hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-clickable {
+  cursor: pointer;
+}

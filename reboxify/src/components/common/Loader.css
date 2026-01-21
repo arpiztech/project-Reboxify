@@ -1,0 +1,74 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.loader-fullscreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border-radius: 50%;
+  border-style: solid;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sizes */
+.loader-small .spinner {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+}
+
+.loader-medium .spinner {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+
+.loader-large .spinner {
+  width: 60px;
+  height: 60px;
+  border-width: 5px;
+}
+
+/* Colors */
+.loader-primary .spinner {
+  border-color: #e5e7eb;
+  border-top-color: #16a34a;
+}
+
+.loader-secondary .spinner {
+  border-color: #e5e7eb;
+  border-top-color: #3b82f6;
+}
+
+.loader-danger .spinner {
+  border-color: #e5e7eb;
+  border-top-color: #ef4444;
+}
+
+.loader-text {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+}

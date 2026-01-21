@@ -1,0 +1,242 @@
+.box-details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.box-details-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.box-details-header {
+  background: linear-gradient(135deg, #34d399 0%, #3b82f6 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.box-emoji-large {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.box-details-title h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+}
+
+.status-badge.available {
+  background: #16a34a;
+}
+
+.status-badge.rented {
+  background: #ef4444;
+}
+
+.box-details-content {
+  padding: 2rem;
+}
+
+.details-section {
+  margin-bottom: 2rem;
+}
+
+.details-section:last-child {
+  margin-bottom: 0;
+}
+
+.details-section h3 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.details-section p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.spec-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.spec-detail svg {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.spec-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spec-detail-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.spec-detail-value {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.rental-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rental-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.rental-info-item span {
+  color: #6b7280;
+}
+
+.rental-info-item strong {
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.rental-info-item .price {
+  color: #16a34a;
+  font-size: 1.5rem;
+}
+
+.box-details-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+}
+
+.box-details-footer button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-cancel:hover {
+  background: #d1d5db;
+}
+
+.btn-rent {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+}
+
+.btn-rent:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(22, 163, 74, 0.3);
+}
+
+.btn-rent:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .box-emoji-large {
+    font-size: 6rem;
+  }
+
+  .box-details-title h2 {
+    font-size: 1.5rem;
+  }
+}

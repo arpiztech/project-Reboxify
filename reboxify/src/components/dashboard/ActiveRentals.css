@@ -1,0 +1,118 @@
+.active-rentals {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rentals-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.rentals-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  flex: 1;
+  font-weight: 700;
+}
+
+.rentals-count {
+  background: #16a34a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.no-rentals {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.no-rentals-icon {
+  color: #9ca3af;
+  margin: 0 auto 1rem;
+}
+
+.no-rentals p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.rentals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rental-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.rental-card:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.rental-emoji {
+  font-size: 2.5rem;
+}
+
+.rental-info {
+  flex: 1;
+}
+
+.rental-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.rental-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.rental-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.rental-deposit {
+  font-weight: 700;
+  color: #16a34a;
+  font-size: 1.1rem;
+}
+
+.btn-return {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.875rem;
+}
+
+.btn-return:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
