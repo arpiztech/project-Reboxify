@@ -1,0 +1,117 @@
+.history-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.history-header h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.history-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.history-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.history-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.history-table td {
+  padding: 1.25rem 1.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.box-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box-icon {
+  font-size: 2rem;
+}
+
+.box-info strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.condition-badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.condition-badge.good {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.condition-badge.damaged {
+  background-color: #fed7aa;
+  color: #92400e;
+}
+
+.deposit {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .history-table-container {
+    overflow-x: auto;
+  }
+
+  .history-table {
+    min-width: 600px;
+  }
+}
