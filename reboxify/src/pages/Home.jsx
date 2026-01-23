@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Package, Leaf, Shield, TrendingUp, ArrowRight } from "lucide-react";
-import Footer from "@components/common/Footer";
+import Footer from "../components/common/Footer";
 import "./Home.css";
 
 const Home = () => {

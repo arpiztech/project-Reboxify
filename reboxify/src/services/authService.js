@@ -3,7 +3,7 @@ import {
   STORAGE_KEYS,
   INITIAL_WALLET_BALANCE,
   USER_ROLES,
-} from "@utils/constants";
+} from "../utils/constants";
 
 class AuthService {
   register(name, email, password) {

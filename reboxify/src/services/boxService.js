@@ -1,5 +1,5 @@
 import storageService from "./storageService";
-import { STORAGE_KEYS, BOX_STATUS } from "@utils/constants";
+import { STORAGE_KEYS, BOX_STATUS } from "../utils/constants";
 
 class BoxService {
   getAllBoxes() {

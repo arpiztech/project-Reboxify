@@ -1,5 +1,5 @@
-import { STORAGE_KEYS } from "@utils/constants";
-import { initialBoxes } from "@data/initialBoxes";
+import { STORAGE_KEYS } from "../utils/constants";
+import { initialBoxes } from "../data/initialBoxes";
 
 class StorageService {
   get(key) {

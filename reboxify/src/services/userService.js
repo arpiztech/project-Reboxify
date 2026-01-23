@@ -1,5 +1,5 @@
 import storageService from "./storageService";
-import { STORAGE_KEYS } from "@utils/constants";
+import { STORAGE_KEYS } from "../utils/constants";
 
 class UserService {
   getAllUsers() {

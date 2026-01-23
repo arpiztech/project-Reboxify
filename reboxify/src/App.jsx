@@ -5,20 +5,20 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-// import { AuthProvider, useAuth } from "@context/AuthContext";
-// import { BoxProvider } from "@context/BoxContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
+import { BoxProvider } from "./context/BoxContext";
 
 // Pages
-import Home from "@/pages/Home";
-import Login from "@pages/Login";
-import Register from "@pages/Register";
-import Dashboard from "@pages/Dashboard";
-import Boxes from "@pages/Boxes";
-import MyRentals from "@pages/MyRentals";
-import RentalHistory from "@pages/RentalHistory";
-import Profile from "@pages/Profile";
-import AdminDashboard from "@pages/AdminDashboard";
-import NotFound from "@pages/NotFound";
+import Home from ".//pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Boxes from "./pages/Boxes";
+import MyRentals from "./pages/MyRentals";
+import RentalHistory from "./pages/RentalHistory";
+import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/AdminDashboard";
+import NotFound from "./pages/NotFound";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {

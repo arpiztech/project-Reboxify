@@ -8,7 +8,7 @@ import {
   TRANSACTION_TYPES,
   REFUND_PERCENTAGES,
   RETURN_CONDITIONS,
-} from "@utils/constants";
+} from "../utils/constants";
 
 class RentalService {
   rentBox(userId, boxId) {

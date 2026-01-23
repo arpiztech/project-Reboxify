@@ -1,5 +1,5 @@
 import storageService from "./storageService";
-import { STORAGE_KEYS, ENVIRONMENTAL_IMPACT } from "@utils/constants";
+import { STORAGE_KEYS, ENVIRONMENTAL_IMPACT } from "../utils/constants";
 
 class AnalyticsService {
   calculateEnvironmentalImpact() {

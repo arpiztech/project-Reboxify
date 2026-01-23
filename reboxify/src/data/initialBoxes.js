@@ -1,4 +1,4 @@
-import { BOX_CATEGORIES, BOX_STATUS } from "@utils/constants";
+import { BOX_CATEGORIES, BOX_STATUS } from "../utils/constants";
 
 export const initialBoxes = [
   {

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Users, Package, TrendingUp, DollarSign } from "lucide-react";
-import Header from "@components/common/Header";
-import StatCard from "@components/dashboard/StatCard";
-import userService from "@services/userService";
-import boxService from "@services/boxService";
-import rentalService from "@services/rentalService";
-import analyticsService from "@services/analyticsService";
+import Header from "../components/common/Header";
+import StatCard from "../components/dashboard/StatCard";
+import userService from "../services/userService";
+import boxService from "../services/boxService";
+import rentalService from "../services/rentalService";
+import analyticsService from "../services/analyticsService";
 import "./AdminDashboard.css";
 
 const AdminDashboard = () => {
