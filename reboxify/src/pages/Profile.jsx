@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, User, Mail, Wallet, Calendar } from 'lucide-react';
-import Header from '../components/common/Header';
-import { useAuth } from '../context/AuthContext';
-import { useBoxes } from '../context/BoxContext';
-import './Profile.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft, User, Mail, Wallet, Calendar } from "lucide-react";
+import Header from "../components/common/Header";
+import { useAuth } from "../context/AuthContext";
+import { useBoxes } from "../context/BoxContext";
+import "./Profile.css";
 
 const Profile = () => {
   const { currentUser } = useAuth();
-  const { getActiveRentals, getRentalHistory, getUserTransactions } = useBoxes();
+  const { getActiveRentals, getRentalHistory, getUserTransactions } =
+    useBoxes();
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('profile');
+  const [activeTab, setActiveTab] = useState("profile");
 
   const activeRentals = getActiveRentals();
   const history = getRentalHistory();
@@ -19,10 +20,10 @@ const Profile = () => {
   return (
     <div className="profile-page">
       <Header />
-      
+
       <div className="profile-container">
         <div className="profile-header">
-          <button onClick={() => navigate('/dashboard')} className="back-btn">
+          <button onClick={() => navigate("/dashboard")} className="back-btn">
             <ArrowLeft size={20} />
             Back
           </button>
@@ -36,7 +37,7 @@ const Profile = () => {
             </div>
             <h3>{currentUser?.name}</h3>
             <p className="profile-email">{currentUser?.email}</p>
-            
+
             <div className="profile-stats">
               <div className="stat-item">
                 <Wallet size={20} />
@@ -49,7 +50,9 @@ const Profile = () => {
                 <Calendar size={20} />
                 <div>
                   <span>Member Since</span>
-                  <strong>{new Date(currentUser?.createdAt).toLocaleDateString()}</strong>
+                  <strong>
+                    {new Date(currentUser?.createdAt).toLocaleDateString()}
+                  </strong>
                 </div>
               </div>
             </div>
@@ -57,28 +60,28 @@ const Profile = () => {
 
           <div className="profile-main">
             <div className="tabs">
-              <button 
-                className={`tab ${activeTab === 'profile' ? 'active' : ''}`}
-                onClick={() => setActiveTab('profile')}
+              <button
+                className={`tab ${activeTab === "profile" ? "active" : ""}`}
+                onClick={() => setActiveTab("profile")}
               >
                 Profile Info
               </button>
-              <button 
-                className={`tab ${activeTab === 'transactions' ? 'active' : ''}`}
-                onClick={() => setActiveTab('transactions')}
+              <button
+                className={`tab ${activeTab === "transactions" ? "active" : ""}`}
+                onClick={() => setActiveTab("transactions")}
               >
                 Transactions
               </button>
-              <button 
-                className={`tab ${activeTab === 'stats' ? 'active' : ''}`}
-                onClick={() => setActiveTab('stats')}
+              <button
+                className={`tab ${activeTab === "stats" ? "active" : ""}`}
+                onClick={() => setActiveTab("stats")}
               >
                 Statistics
               </button>
             </div>
 
             <div className="tab-content">
-              {activeTab === 'profile' && (
+              {activeTab === "profile" && (
                 <div className="profile-info">
                   <div className="info-group">
                     <label>Full Name</label>
@@ -90,36 +93,47 @@ const Profile = () => {
                   </div>
                   <div className="info-group">
                     <label>Account Type</label>
-                    <div className="info-value">{currentUser?.role.toUpperCase()}</div>
+                    <div className="info-value">
+                      {currentUser?.role.toUpperCase()}
+                    </div>
                   </div>
                   <div className="info-group">
                     <label>Wallet Balance</label>
-                    <div className="info-value wallet">₹{currentUser?.wallet}</div>
+                    <div className="info-value wallet">
+                      ₹{currentUser?.wallet}
+                    </div>
                   </div>
                 </div>
               )}
 
-              {activeTab === 'transactions' && (
+              {activeTab === "transactions" && (
                 <div className="transactions-list">
                   {transactions.length === 0 ? (
                     <div className="empty-message">No transactions yet</div>
                   ) : (
-                    transactions.slice().reverse().map(txn => (
-                      <div key={txn.id} className="transaction-item">
-                        <div className="txn-info">
-                          <strong>{txn.description}</strong>
-                          <span>{new Date(txn.timestamp).toLocaleString()}</span>
+                    transactions
+                      .slice()
+                      .reverse()
+                      .map((txn) => (
+                        <div key={txn.id} className="transaction-item">
+                          <div className="txn-info">
+                            <strong>{txn.description}</strong>
+                            <span>
+                              {new Date(txn.timestamp).toLocaleString()}
+                            </span>
+                          </div>
+                          <div
+                            className={`txn-amount ${txn.amount > 0 ? "positive" : "negative"}`}
+                          >
+                            {txn.amount > 0 ? "+" : ""}₹{txn.amount}
+                          </div>
                         </div>
-                        <div className={`txn-amount ${txn.amount > 0 ? 'positive' : 'negative'}`}>
-                          {txn.amount > 0 ? '+' : ''}₹{txn.amount}
-                        </div>
-                      </div>
-                    ))
+                      ))
                   )}
                 </div>
               )}
 
-              {activeTab === 'stats' && (
+              {activeTab === "stats" && (
                 <div className="stats-grid">
                   <div className="stat-card">
                     <h4>Active Rentals</h4>

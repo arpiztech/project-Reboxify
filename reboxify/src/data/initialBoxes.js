@@ -79,4 +79,17 @@ export const initialBoxes = [
     weight: "5 kg",
     material: "Reinforced Plastic",
   },
+  {
+    id: "box_006",
+    name: "Extra Bulk Storage Box",
+    size: "60x50x40 cm",
+    deposit: 300,
+    status: BOX_STATUS.AVAILABLE,
+    category: BOX_CATEGORIES.BULK,
+    description: "Industrial-grade box for heavy-duty storage",
+    imageUrl: "📦",
+    capacity: "250 liters",
+    weight: "8 kg",
+    material: "Reinforced Plastic",
+  },
 ];
