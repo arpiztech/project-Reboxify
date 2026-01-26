@@ -71,6 +71,66 @@ const Dashboard = () => {
     },
   ];
 
+  // ===== NEW: Recent Activity =====
+  const recentActivities = [
+    {
+      action: "Rented Medium Box",
+      timestamp: "2 hours ago",
+      type: "rental",
+    },
+    {
+      action: "Returned Small Box",
+      timestamp: "1 day ago",
+      type: "return",
+    },
+    {
+      action: "Achievement Unlocked: Eco Warrior",
+      timestamp: "3 days ago",
+      type: "achievement",
+    },
+  ].slice(0, Math.min(3, history.length + activeRentals.length));
+
+  // ===== NEW: Leaderboard =====
+  const leaderboard = [
+    { rank: 1, name: "EcoChampion", rentals: 45, isCurrentUser: false },
+    {
+      rank: 2,
+      name: currentUser?.name || "You",
+      rentals: history.length,
+      isCurrentUser: true,
+    },
+    { rank: 3, name: "GreenWarrior", rentals: 18, isCurrentUser: false },
+    { rank: 4, name: "PlasticFree", rentals: 15, isCurrentUser: false },
+  ];
+
+  // ===== NEW: Eco Tips =====
+  const ecoTips = [
+    {
+      icon: "♻️",
+      title: "Reuse & Recycle",
+      content: "Always return boxes on time to help others save plastic!",
+    },
+    {
+      icon: "🌍",
+      title: "Spread the Word",
+      content: "Share your eco-journey with friends and family.",
+    },
+  ];
+
+  // ===== NEW: Monthly Goals =====
+  const monthlyGoals = [
+    {
+      name: "Rent 5 boxes this month",
+      current: Math.min(activeRentals.length, 5),
+      target: 5,
+    },
+    {
+      name: "Save 2kg of plastic",
+      current: Math.min(plasticSaved, 2),
+      target: 2,
+    },
+  ];
+
   return (
     <div className="dashboard-page">
       <Header />
@@ -177,6 +237,78 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ===== NEW: Recent Activity Timeline ===== */}
+        {recentActivities.length > 0 && (
+          <div className="dashboard-card">
+            <h3>📋 Recent Activity</h3>
+            <div className="activity-timeline">
+              {recentActivities.map((activity, index) => (
+                <div key={index} className="activity-item">
+                  <div className="activity-dot"></div>
+                  <div className="activity-content">
+                    <h4>{activity.action}</h4>
+                    <p>{activity.timestamp}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ===== NEW: Leaderboard ===== */}
+        <div className="dashboard-card leaderboard-card">
+          <h3>🏆 Top Eco Warriors</h3>
+          <div className="leaderboard-list">
+            {leaderboard.map((user, index) => (
+              <div key={index} className="leaderboard-item">
+                <span className="leaderboard-rank">#{user.rank}</span>
+                <div className="leaderboard-info">
+                  <h4>
+                    {user.name} {user.isCurrentUser && "(You)"}
+                  </h4>
+                  <p>{user.rentals} boxes reused</p>
+                </div>
+                <span className="leaderboard-score">{user.rentals}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ===== NEW: Eco Tips ===== */}
+        <div className="dashboard-card tips-card">
+          <h3>💡 Eco Tips</h3>
+          {ecoTips.map((tip, index) => (
+            <div key={index} className="tip-item">
+              <span className="tip-icon">{tip.icon}</span>
+              <div className="tip-content">
+                <h4>{tip.title}</h4>
+                <p>{tip.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ===== NEW: Monthly Goals ===== */}
+        <div className="dashboard-card goals-card">
+          <h3>🎯 Monthly Goals</h3>
+          {monthlyGoals.map((goal, index) => (
+            <div key={index} className="goal-item">
+              <div className="goal-header">
+                <h4>{goal.name}</h4>
+                <span className="goal-percentage">
+                  {Math.round((goal.current / goal.target) * 100)}%
+                </span>
+              </div>
+              <div className="goal-progress-bar">
+                <div
+                  className="goal-progress-fill"
+                  style={{ width: `${(goal.current / goal.target) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {activeRentals.length > 0 && (
