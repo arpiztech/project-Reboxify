@@ -2,8 +2,7 @@
 🌟 Project Overview
 
 ReBoxify is a modern web application designed to promote sustainability by enabling users to create, manage, and reuse virtual boxes for organizing items. Instead of using physical storage repeatedly, users can digitally manage reusable boxes and track their contents efficiently.
-This project is built as a frontend-focused application using React, where all data is stored in Local Storage (no backend required for now), making it fast, lightweight, and easy to deploy.
----
+This project is built as a frontend-focused application using React, where all data is stored in Local Storage (no backend required for now), making it fast, lightweight, and easy to deploy
 
 🎯 Objective
 The main goal of ReBoxify is to:
@@ -12,7 +11,6 @@ Provide a simple and interactive UI for managing boxes
 Demonstrate frontend development skills using React
 Simulate real-world CRUD operations without a backend
 
----
 🚀 Features
 
 📦 Box Management
@@ -37,7 +35,6 @@ React.js	Frontend UI
 JavaScript (ES6+)	Logic & functionality
 CSS / Bootstrap / Tailwind	Styling
 Local Storage	Data persistence
----
 
 ⚙️ Installation & Setup
 🔹 1. Clone the repository
@@ -47,7 +44,6 @@ cd reboxify
 npm install
 🔹 3. Run the project
 npm run dev
----
 
 📊 How It Works
 User creates a box 📦
